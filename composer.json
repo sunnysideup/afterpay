@@ -1,42 +1,37 @@
 {
-    "name": "culturekings/afterpay",
-    "description": "Integrate easily with the afterpay.com.au API",
-    "keywords": ["afterpay", "payments", "shopping"],
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Jared Fraser",
-            "email": "j.fraser@culturekings.com.au"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:culturekings/Symfony2-coding-standard.git"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {
-        "php": ">=5.6",
-        "guzzlehttp/guzzle": "^7.0",
-        "jms/serializer": "^3.0",
-        "psr/log": "^1.0",
-        "nesbot/carbon": "^2.63",
-        "symfony/yaml": "^3.1"
-    },
-    "require-dev": {
-        "phpspec/phpspec": "^3.0",
-        "henrikbjorn/phpspec-code-coverage": "^3.0",
-        "symfony/var-dumper": "^3.1",
-        "squizlabs/php_codesniffer": "~3.0.1",
-        "sebastian/phpcpd": "^2.0",
-        "satooshi/php-coveralls": "dev-master",
-        "symfony/console": "^3.1"
-    },
-    "autoload": {
-        "psr-4": {
-            "CultureKings\\Afterpay\\": "src/"
-        }
+  "name": "culturekings/afterpay",
+  "description": "Integrate easily with the afterpay.com.au API",
+  "keywords": [
+    "afterpay",
+    "payments",
+    "shopping"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jared Fraser",
+      "email": "j.fraser@culturekings.com.au"
     }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:culturekings/Symfony2-coding-standard.git"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=8.1",
+    "guzzlehttp/guzzle": "^7.0",
+    "jms/serializer": "*",
+    "psr/log": "*",
+    "nesbot/carbon": "*",
+    "symfony/yaml": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "CultureKings\\Afterpay\\": "src/"
+    }
+  }
 }
