@@ -1,6 +1,6 @@
 {
-  "name": "culturekings/afterpay",
-  "description": "Integrate easily with the afterpay.com.au API",
+  "name": "sunnysideup/afterpay",
+  "description": "Integrate easily with the afterpay.com.au API - copy from culture kings with newer PHP stuff",
   "keywords": [
     "afterpay",
     "payments",
