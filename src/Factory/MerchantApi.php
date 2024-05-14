@@ -1,4 +1,5 @@
 <?php
+
 namespace CultureKings\Afterpay\Factory;
 
 use CultureKings\Afterpay\Model\Merchant\Authorization;
@@ -29,10 +30,10 @@ class MerchantApi extends Api
         SerializerInterface $serializer = null
     ) {
 
-        AnnotationRegistry::registerLoader('class_exists');
+        // AnnotationRegistry::registerLoader('class_exists');
 
-        $afterpayClient = $client ? : new Client([ 'base_uri' => $authorization->getEndpoint(), 'headers' => ['User-Agent' => $authorization->getUserAgent() ] ]);
-        $afterpaySerializer = $serializer ? : SerializerFactory::getSerializer();
+        $afterpayClient = $client ?: new Client([ 'base_uri' => $authorization->getEndpoint(), 'headers' => ['User-Agent' => $authorization->getUserAgent() ] ]);
+        $afterpaySerializer = $serializer ?: SerializerFactory::getSerializer();
 
         return new ConfigurationService($afterpayClient, $authorization, $afterpaySerializer);
     }
@@ -49,10 +50,10 @@ class MerchantApi extends Api
         SerializerInterface $serializer = null
     ) {
 
-        AnnotationRegistry::registerLoader('class_exists');
+        // AnnotationRegistry::registerLoader('class_exists');
 
-        $afterpayClient = $client ? : new Client([ 'base_uri' => $authorization->getEndpoint(), 'headers' => ['User-Agent' => $authorization->getUserAgent() ] ]);
-        $afterpaySerializer = $serializer ? : SerializerFactory::getSerializer();
+        $afterpayClient = $client ?: new Client([ 'base_uri' => $authorization->getEndpoint(), 'headers' => ['User-Agent' => $authorization->getUserAgent() ] ]);
+        $afterpaySerializer = $serializer ?: SerializerFactory::getSerializer();
 
         return new PaymentsService($afterpayClient, $authorization, $afterpaySerializer);
     }
@@ -68,10 +69,10 @@ class MerchantApi extends Api
         Client $client = null,
         SerializerInterface $serializer = null
     ) {
-        AnnotationRegistry::registerLoader('class_exists');
+        // AnnotationRegistry::registerLoader('class_exists');
 
-        $afterpayClient = $client ? : new Client([ 'base_uri' => $authorization->getEndpoint(), 'headers' => ['User-Agent' => $authorization->getUserAgent() ] ]);
-        $afterpaySerializer = $serializer ? : SerializerFactory::getSerializer();
+        $afterpayClient = $client ?: new Client([ 'base_uri' => $authorization->getEndpoint(), 'headers' => ['User-Agent' => $authorization->getUserAgent() ] ]);
+        $afterpaySerializer = $serializer ?: SerializerFactory::getSerializer();
 
         return new OrdersService($afterpayClient, $authorization, $afterpaySerializer);
     }
@@ -86,11 +87,10 @@ class MerchantApi extends Api
         $endpoint,
         ClientInterface $client = null
     ) {
-        AnnotationRegistry::registerLoader('class_exists');
+        // AnnotationRegistry::registerLoader('class_exists');
 
         $afterpayClient = $client ?: new Client([ 'base_uri' => $endpoint ]);
 
         return new PingService($afterpayClient);
     }
 }
-

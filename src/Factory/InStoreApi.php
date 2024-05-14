@@ -1,4 +1,5 @@
 <?php
+
 namespace CultureKings\Afterpay\Factory;
 
 use CultureKings\Afterpay\Model\InStore\Authorization;
@@ -26,7 +27,7 @@ class InStoreApi extends Api
         ClientInterface $client = null,
         SerializerInterface $serializer = null
     ) {
-        AnnotationRegistry::registerLoader('class_exists');
+        // AnnotationRegistry::registerLoader('class_exists');
 
         $afterpayClient = $client ?: new Client([ 'base_uri' => $authorization->getEndpoint() ]);
         $afterpaySerializer = $serializer ?: SerializerFactory::getSerializer();
@@ -46,7 +47,7 @@ class InStoreApi extends Api
         Client $client = null,
         SerializerInterface $serializer = null
     ) {
-        AnnotationRegistry::registerLoader('class_exists');
+        // AnnotationRegistry::registerLoader('class_exists');
 
         $afterpayClient = $client ?: new Client([ 'base_uri' => $authorization->getEndpoint() ]);
         $afterpaySerializer = $serializer ?: SerializerFactory::getSerializer();
@@ -66,7 +67,7 @@ class InStoreApi extends Api
         Client $client = null,
         SerializerInterface $serializer = null
     ) {
-        AnnotationRegistry::registerLoader('class_exists');
+        // AnnotationRegistry::registerLoader('class_exists');
 
         $afterpayClient = $client ?: new Client([ 'base_uri' => $authorization->getEndpoint() ]);
         $afterpaySerializer = $serializer ?: SerializerFactory::getSerializer();
@@ -86,7 +87,7 @@ class InStoreApi extends Api
         Client $client = null,
         SerializerInterface $serializer = null
     ) {
-        AnnotationRegistry::registerLoader('class_exists');
+        // AnnotationRegistry::registerLoader('class_exists');
 
         $afterpayClient = $client ?: new Client([ 'base_uri' => $authorization->getEndpoint() ]);
         $afterpaySerializer = $serializer ?: SerializerFactory::getSerializer();
@@ -106,7 +107,7 @@ class InStoreApi extends Api
         Client $client = null,
         SerializerInterface $serializer = null
     ) {
-        AnnotationRegistry::registerLoader('class_exists');
+        // AnnotationRegistry::registerLoader('class_exists');
 
         $afterpayClient = $client ?: new Client([ 'base_uri' => $authorization->getEndpoint() ]);
         $afterpaySerializer = $serializer ?: SerializerFactory::getSerializer();
@@ -124,7 +125,7 @@ class InStoreApi extends Api
         $endpoint,
         ClientInterface $client = null
     ) {
-        AnnotationRegistry::registerLoader('class_exists');
+        // AnnotationRegistry::registerLoader('class_exists');
 
         $afterpayClient = $client ?: new Client([ 'base_uri' => $endpoint ]);
 
